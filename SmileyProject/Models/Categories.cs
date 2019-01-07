@@ -8,6 +8,7 @@ namespace SmileyProject.Models
 {
     class Categories
     {
-        public string CategoryName { get; set; }
+        public string Category { get; set; }
+        public List<Smiley> items { get; set; }
     }
 }

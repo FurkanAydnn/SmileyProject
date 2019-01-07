@@ -12,13 +12,13 @@ namespace SmileyProject.BusinessLogic
     class JSONHelper
     {
 
-        public List<Smiley> GetSmileys()
+        public List<Categories> GetCategories()
         {
-            List<Smiley> smileyList = new List<Smiley>();
+            List<Categories> List = new List<Categories>();
             JavaScriptSerializer jss = new JavaScriptSerializer();
             string content = File.ReadAllText("smiley_content.json");
-            smileyList = jss.Deserialize<List<Smiley>>(content);
-            return smileyList;
+            List = jss.Deserialize<List<Categories>>(content);
+            return List;
         }
 
     }

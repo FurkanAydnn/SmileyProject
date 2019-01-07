@@ -10,6 +10,5 @@ namespace SmileyProject.Models
     {
         public string Name { get; set; }
         public string Art { get; set; }
-        public Categories Category { get; set; }
     }
 }

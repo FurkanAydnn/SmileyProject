@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SmileyProject.BusinessLogic;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -8,6 +9,7 @@ namespace SmileyProject
 {
     static class Program
     {
+        public static JSONHelper jsonHelper = new JSONHelper();
         /// <summary>
         /// The main entry point for the application.
         /// </summary>
