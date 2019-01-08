@@ -20,21 +20,31 @@ namespace SmileyProject
         List<Categories> category = Program.jsonHelper.GetCategories();
         private void Form1_Load(object sender, EventArgs e)
         {
+            btnBack.Visible = false;
             foreach (Categories item in category)
             {
-                Button b = new Button();
-                b.Text = item.Category;
-                b.Name = item.Category;
-                b.Height = 60;
-                b.Width = 125;
-                b.Click += new EventHandler(b1_Click);
-                flpMain.Controls.Add(b);
+                CreateButton(item.Category, item.Category);
             }
+        }
+
+        private void CreateButton(string buttonText, string buttonName,bool isCat = true)
+        {
+            Button b = new Button();
+            b.Text = buttonText;
+            b.Name = buttonName;
+            b.Height = 60;
+            b.Width = 125;
+            if (isCat is true)
+                b.Click += new EventHandler(b1_Click);
+            else
+                b.Click += new EventHandler(b2_Click);
+            flpMain.Controls.Add(b);
         }
 
         private void b1_Click(object sender, EventArgs e)
         {
             Button button = sender as Button;
+            btnBack.Visible = true;
 
             flpMain.Controls.Clear();
             foreach (Categories item in category)
@@ -43,13 +53,7 @@ namespace SmileyProject
                 {
                     foreach (var smiley in item.items)
                     {
-                        Button b = new Button();
-                        b.Text = smiley.Name + "\n" + smiley.Art;
-                        b.Name = smiley.Art;
-                        b.Height = 60;
-                        b.Width = 125;
-                        b.Click += new EventHandler(b2_Click);
-                        flpMain.Controls.Add(b);
+                        CreateButton(smiley.Name + "\n" + smiley.Art, smiley.Art,false);
                     }
                 }
             }
