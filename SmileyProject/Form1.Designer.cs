@@ -38,7 +38,7 @@
             this.flpMain.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.flpMain.Location = new System.Drawing.Point(0, 23);
             this.flpMain.Name = "flpMain";
-            this.flpMain.Size = new System.Drawing.Size(280, 404);
+            this.flpMain.Size = new System.Drawing.Size(279, 404);
             this.flpMain.TabIndex = 0;
             // 
             // btnBack
@@ -58,11 +58,11 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(280, 427);
+            this.ClientSize = new System.Drawing.Size(279, 427);
             this.Controls.Add(this.btnBack);
             this.Controls.Add(this.flpMain);
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "SmiLey(｡◕‿◕｡)";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
 
