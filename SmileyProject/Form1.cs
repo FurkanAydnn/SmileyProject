@@ -17,10 +17,9 @@ namespace SmileyProject
         {
             InitializeComponent();
         }
-
+        List<Categories> category = Program.jsonHelper.GetCategories();
         private void Form1_Load(object sender, EventArgs e)
         {
-            List<Categories> category = Program.jsonHelper.GetCategories();
             foreach (Categories item in category)
             {
                 Button b = new Button();
@@ -38,7 +37,6 @@ namespace SmileyProject
             Button button = sender as Button;
 
             flpMain.Controls.Clear();
-            List<Categories> category = Program.jsonHelper.GetCategories();
             foreach (Categories item in category)
             {
                 if (item.Category == button.Name)
@@ -66,7 +64,7 @@ namespace SmileyProject
         private void btnBack_Click(object sender, EventArgs e)
         {
             flpMain.Controls.Clear();
-            Form1_Load(sender,e);
+            Form1_Load(sender, e);
         }
     }
 }
